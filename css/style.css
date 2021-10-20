@@ -1,0 +1,136 @@
+@import "reset.css";
+
+/* root */
+:root {
+    --darkColor:#515151;
+    --lightColor: #fff;
+    --lightBlueColor: #3498db;
+    --darkBlueColor: #2980b9;
+    --lightGreenColor:#1abc9c;
+    --darkGreenColor: #16a085;
+    --lightGrayColor: #ccc;
+    --taskManagerColor: #dff9fb;
+    --lightRedColor: #e74c3c;
+    --darkRedColor: #c0392b;
+}
+
+main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0,0,0,.8),transparent), url(../img/img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+h1 {
+    color: var(--lightColor);
+}
+
+/* start section: task-manager */
+
+#task-manager {
+    border: 1px solid var(--lightGrayColor);
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--taskManagerColor);
+}
+
+.form-group {
+    padding: .2rem;
+    margin: .5rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.form-group input {
+    border-radius: .5rem;
+    border: 1px solid var(--lightGrayColor);
+    padding: .4rem;
+    margin: 0 .2rem;
+    outline: none;
+    transition: 200ms;
+}
+
+.form-group input:focus {
+    box-shadow: 1px 1px 1px var(--lightBlueColor);
+}
+
+.form-group button {
+    border: none;
+    border-radius: .5rem;
+    padding: .6rem .8rem;
+    color: var(--darkColor);
+    background-color: var(--lightGreenColor);
+    transition: 200ms;
+}
+
+.form-group button:hover {
+    background-color: var(--darkGreenColor);
+    color: var(--lightColor);
+    cursor: pointer;
+}
+
+/* start task-list */
+
+.task-list{
+
+}
+
+.task-list ul {
+    list-style: none;
+}
+
+.task-list-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--lightColor);
+    padding: 0.5rem;
+    margin: .4rem 0;
+    border-radius: .5rem;
+}
+
+.list-item-title{
+    font-size: 1.2rem;
+}
+
+.list-item-buttons button{
+    border: none;
+    border-radius: .4rem;
+    padding: .2rem .5rem;
+    color: var(--darkColor);
+    transition: 200ms;
+}
+
+.list-item-buttons button:hover{
+    color: var(--lightColor);
+    cursor: pointer;
+}
+
+.btn-edit{
+    background-color: var(--lightBlueColor);
+}
+
+.btn-edit:hover{
+    background-color: var(--darkBlueColor);
+}
+
+.btn-delete{
+    background-color: var(--lightRedColor);
+}
+
+.btn-delete:hover{
+    background-color: var(--darkRedColor);
+}
+
+/* end task-list */
+
+/* end section: task-manager */
